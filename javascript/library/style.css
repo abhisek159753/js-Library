@@ -1,0 +1,68 @@
+.book-cont{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.books{
+    display: none;
+}
+.book{
+    display: grid;
+    width: 225px;
+    height: 350px;
+    border: 1px solid black;
+    gap: 3px;
+    grid-template-rows: repeat(4, 1fr);
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    align-self: center;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    margin-left: 40%;
+}
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+.book-option{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+    width: 225px;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+}
+.read{
+    border: 1px solid black;
+    background-color: lightskyblue;
+    text-align:center;
+}
+.read:hover{
+    background-color: rgb(105, 178, 223);
+}
+.remove-book{
+    border: 1px solid black;
+    background-color: red;
+    text-align: center;
+}
+.remove-book:hover{
+    background-color: rgb(209, 3, 3);
+}
+
+.add-container{
+    margin:10px;
+    text-align: center;
+}
+.add-book{
+    background-color: lightskyblue;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 14px 40px;
+}
+.add-book:hover{
+    background-color: rgb(111, 179, 221);
+    cursor: pointer;
+}

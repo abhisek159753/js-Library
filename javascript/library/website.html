@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!--Add book button-->
+    <div class="container">
+        <div class="add-container">
+            <button class="add-book" id="add-books">Add Book</button>
+        </div>
+        <!--Form for book information, hidden initially-->
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container" id="book-form">
+                <h1>Book Information</h1>
+                <label for="title">Title</label>
+                <input type="text" placeholder="Book Title" id="title" name="title" required></br>
+
+                <label for="author">Author</label>
+                <input type="text" placeholder="Author Name" id="author" name="author" required><br>
+
+                <label for="page">Pages</label>
+                <input type="tel" placeholder="Total Pages" id="page" name="pages" required><br>
+
+                <p>Select read status</p>
+                <input type="radio" id="read" name="read" value = "Read">
+                <label for="read">Read</label></br>
+                <input type="radio" id="notRead" name="read" value = "Not Read">
+                <label for="notRead">Not Read</label></br>
+                <input type="button" value="submit" id="submitBtn">
+            </form>
+        </div>
+        <!--Book list-->
+        <div class="book-cont" id="bookContainer">
+            <div class="books" id=books>
+                <div class ="book" id="book">
+                    <div class="title" id="titles"></div>
+                    <div class="author" id="authors"></div>
+                    <div class="pages" id="pages"></div>
+                    <div class="readS" id="readStatus"></div>
+                </div>
+                <!--Option to make book as read/unread and remove from list-->
+                <div class="book-option">
+                    <button class ="read" id="toggleRead">Read</button>
+                    <button class ="remove-book" id="rmvBook">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
