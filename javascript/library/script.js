@@ -19,7 +19,6 @@ window.onload = function(){
         myLibrary.push(book);
         displayLibrary();
     }
-
     function displayLibrary(){
         var node = document.getElementById("books");
         var clone = node.cloneNode(true);
@@ -44,14 +43,21 @@ window.onload = function(){
         document.getElementById("book-form").reset();
     });
 
-    const toggleRead = document.getElementById("toggleRead");
-    toggleRead.addEventListener("click", function(){
-        //change read status
+    document.body.addEventListener("click", function(e){
+        if(e.target.id == "toggleRead"){
+            var readStatus = e.target.parentElement.parentElement.querySelector("#readStatus");
+            if(readStatus.innerHTML == "Read"){
+                readStatus.innerHTML = "Not Read";
+            }
+            else{
+                readStatus.innerHTML = "Read"
+            }
+        }
     });
 
-    var rmvBook = document.getElementById("rmvBook");
-    rmvBook.addEventListener("click", function(e){
-        e.parentNode.remove();
-        //remove book
+    document.body.addEventListener("click", function(e){
+        if(e.target.id == "rmvBook"){
+            e.target.parentElement.parentElement.remove();
+        }
     });
 }

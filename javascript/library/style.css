@@ -42,6 +42,7 @@
 }
 .read:hover{
     background-color: rgb(105, 178, 223);
+    cursor: pointer;
 }
 .remove-book{
     border: 1px solid black;
@@ -50,6 +51,7 @@
 }
 .remove-book:hover{
     background-color: rgb(209, 3, 3);
+    cursor: pointer;
 }
 
 .add-container{
