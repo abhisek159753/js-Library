@@ -1,6 +1,6 @@
 window.onload = function(){
     let myLibrary = [];
-
+    
     function Book(title, author, pages, read) {
         this.title = title;
         this.author = author;
@@ -14,11 +14,12 @@ window.onload = function(){
         document.getElementById("pages").innerHTML = ("Number of Pages: "+pages);
         document.getElementById("readStatus").innerHTML = read;
     }
-
+    //adds book to array
     function addBookToLibrary(book) {
         myLibrary.push(book);
         displayLibrary();
     }
+    //creates new book and adds to list
     function displayLibrary(){
         var node = document.getElementById("books");
         var clone = node.cloneNode(true);
@@ -42,7 +43,7 @@ window.onload = function(){
         document.getElementById("myForm").style.display = "none";
         document.getElementById("book-form").reset();
     });
-
+    //change read status
     document.body.addEventListener("click", function(e){
         if(e.target.id == "toggleRead"){
             var readStatus = e.target.parentElement.parentElement.querySelector("#readStatus");
@@ -54,7 +55,7 @@ window.onload = function(){
             }
         }
     });
-
+    //remove book from list
     document.body.addEventListener("click", function(e){
         if(e.target.id == "rmvBook"){
             e.target.parentElement.parentElement.remove();
